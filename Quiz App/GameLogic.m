@@ -7,25 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface GameLogic : NSObject
-
-@property (nonatomic) NSDictionary *question1;
-@property (nonatomic) NSDictionary *question2;
-@property (nonatomic) NSDictionary *question3;
-@property (nonatomic) NSDictionary *question4;
-@property (nonatomic) NSDictionary *question5;
-@property (nonatomic) NSDictionary *question6;
-@property (nonatomic) NSDictionary *question7;
-@property (nonatomic) NSDictionary *question8;
-@property (nonatomic) NSDictionary *question9;
-@property (nonatomic) NSDictionary *question10;
-
--(NSDictionary*)fetchQuestion;
-
--(void)createQuestions;
-
-@end
+#import "GameLogic.h"
 
 @implementation GameLogic
 
@@ -62,13 +44,13 @@
 -(void)createQuestions {
     _question1 = @{@"id":@"1",@"question":@"What is the value of pi?",@"answer1":@"3.1415",@"answer2":@"10.1765",@"answer3":@"1.9054",@"answer4":@"100.4537",@"correctAnswer":@"1"};
     
-    _question2 = @{@"id":@"2",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
+    _question2 = @{@"id":@"2",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"Rhinoceros",@"correctAnswer":@"3"};
     
     _question3 = @{@"id":@"3",@"question":@"How high is Mount Everest?",@"answer1":@"3 267 m",@"answer2":@"10 023 m",@"answer3":@"9 496 m",@"answer4":@" 8 848 m", @"correctAnswer":@"4"};
     
     _question4 = @{@"id":@"4",@"question":@"Who is the president of the United States?",@"answer1":@"Hillary Clinton",@"answer2":@"Barack Obama",@"answer3":@"Donald Trump",@"answer4":@"George Bush",@"correctAnswer":@"3"};
     
-    _question5 = @{@"id":@"5",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"1"};
+    _question5 = @{@"id":@"5",@"question":@"What is the square root of 81?",@"answer1":@"8",@"answer2":@"9",@"answer3":@"7",@"answer4":@"10",@"correctAnswer":@"2"};
     
     _question6 = @{@"id":@"6",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros", @"correctAnswer":@"1"};
     

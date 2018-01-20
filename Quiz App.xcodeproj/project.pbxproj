@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1829242820138E0300A8F44D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829242720138E0300A8F44D /* AppDelegate.m */; };
-		1829242B20138E0300A8F44D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829242A20138E0300A8F44D /* ViewController.m */; };
 		1829242E20138E0300A8F44D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1829242C20138E0300A8F44D /* Main.storyboard */; };
 		1829243020138E0300A8F44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1829242F20138E0300A8F44D /* Assets.xcassets */; };
 		1829243320138E0300A8F44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1829243120138E0300A8F44D /* LaunchScreen.storyboard */; };
@@ -22,8 +21,6 @@
 		1829242320138E0300A8F44D /* Quiz App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiz App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829242620138E0300A8F44D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1829242720138E0300A8F44D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1829242920138E0300A8F44D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1829242A20138E0300A8F44D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1829242D20138E0300A8F44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1829242F20138E0300A8F44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1829243220138E0300A8F44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +31,7 @@
 		182924402013A76E00A8F44D /* MainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		182924422013A7AF00A8F44D /* QuizViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
 		182924432013A7AF00A8F44D /* QuizViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		182924452013B1E400A8F44D /* GameLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +66,6 @@
 			children = (
 				1829242620138E0300A8F44D /* AppDelegate.h */,
 				1829242720138E0300A8F44D /* AppDelegate.m */,
-				1829242920138E0300A8F44D /* ViewController.h */,
-				1829242A20138E0300A8F44D /* ViewController.m */,
 				1829242C20138E0300A8F44D /* Main.storyboard */,
 				1829242F20138E0300A8F44D /* Assets.xcassets */,
 				1829243120138E0300A8F44D /* LaunchScreen.storyboard */,
@@ -80,6 +76,7 @@
 				182924402013A76E00A8F44D /* MainMenuViewController.m */,
 				182924422013A7AF00A8F44D /* QuizViewController.h */,
 				182924432013A7AF00A8F44D /* QuizViewController.m */,
+				182924452013B1E400A8F44D /* GameLogic.h */,
 			);
 			path = "Quiz App";
 			sourceTree = "<group>";
@@ -155,7 +152,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1829242B20138E0300A8F44D /* ViewController.m in Sources */,
 				1829243620138E0300A8F44D /* main.m in Sources */,
 				1829243D2013907500A8F44D /* GameLogic.m in Sources */,
 				1829242820138E0300A8F44D /* AppDelegate.m in Sources */,
