@@ -14,6 +14,8 @@
 		1829243320138E0300A8F44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1829243120138E0300A8F44D /* LaunchScreen.storyboard */; };
 		1829243620138E0300A8F44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829243520138E0300A8F44D /* main.m */; };
 		1829243D2013907500A8F44D /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829243C2013907500A8F44D /* GameLogic.m */; };
+		182924412013A76E00A8F44D /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182924402013A76E00A8F44D /* MainMenuViewController.m */; };
+		182924442013A7AF00A8F44D /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182924432013A7AF00A8F44D /* QuizViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		1829243420138E0300A8F44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1829243520138E0300A8F44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1829243C2013907500A8F44D /* GameLogic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
+		1829243F2013A76E00A8F44D /* MainMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		182924402013A76E00A8F44D /* MainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		182924422013A7AF00A8F44D /* QuizViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		182924432013A7AF00A8F44D /* QuizViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,10 @@
 				1829243420138E0300A8F44D /* Info.plist */,
 				1829243520138E0300A8F44D /* main.m */,
 				1829243C2013907500A8F44D /* GameLogic.m */,
+				1829243F2013A76E00A8F44D /* MainMenuViewController.h */,
+				182924402013A76E00A8F44D /* MainMenuViewController.m */,
+				182924422013A7AF00A8F44D /* QuizViewController.h */,
+				182924432013A7AF00A8F44D /* QuizViewController.m */,
 			);
 			path = "Quiz App";
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 				1829243620138E0300A8F44D /* main.m in Sources */,
 				1829243D2013907500A8F44D /* GameLogic.m in Sources */,
 				1829242820138E0300A8F44D /* AppDelegate.m in Sources */,
+				182924412013A76E00A8F44D /* MainMenuViewController.m in Sources */,
+				182924442013A7AF00A8F44D /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
