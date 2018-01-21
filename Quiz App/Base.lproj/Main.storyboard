@@ -33,24 +33,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpM-g9-9ND">
-                                <rect key="frame" x="95" y="339" width="182" height="30"/>
+                                <rect key="frame" x="95" y="318" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="answerTwo:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="ySS-F4-9m8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIV-9W-BDx">
-                                <rect key="frame" x="95" y="421" width="182" height="30"/>
+                                <rect key="frame" x="95" y="390" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="answerThree:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="tPs-34-8IS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCF-b5-b2x">
-                                <rect key="frame" x="90" y="513" width="187" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="answerFour:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="68a-D4-g72"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtt-yW-a7V">
@@ -66,6 +59,13 @@
                                 <state key="normal" title="Next question"/>
                                 <connections>
                                     <action selector="nextQuestion:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="fzp-eQ-OTP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCF-b5-b2x">
+                                <rect key="frame" x="94" y="457" width="187" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="answerFour:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="68a-D4-g72"/>
                                 </connections>
                             </button>
                         </subviews>

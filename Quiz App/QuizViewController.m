@@ -112,8 +112,8 @@
 // A way to ensure that an answer
 // button cannot be pressed again after
 // providing an answer.
-- (void) toggleButtons: (BOOL)on {
-    if (on) {
+- (void) toggleButtons: (BOOL)isUnanswered {
+    if (isUnanswered) {
         _answer1.enabled = YES;
         _answer2.enabled = YES;
         _answer3.enabled = YES;
