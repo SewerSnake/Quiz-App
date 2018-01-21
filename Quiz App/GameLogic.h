@@ -23,4 +23,6 @@
 
 -(void)createQuestions;
 
+-(BOOL)checkAnswer:(int)idOfQuestion usersAnswer: (NSString*)answer;
+
 @end

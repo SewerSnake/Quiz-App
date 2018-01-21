@@ -63,4 +63,73 @@
     _question10 = @{@"id":@"10",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"1"};
 }
 
+// Determines if the user answered correctly.
+// Returns YES if correct.
+// Returns NO if incorrect.
+-(BOOL)checkAnswer:(int)idOfQuestion usersAnswer: (NSString*)answer {
+    
+    if (idOfQuestion == 1) {
+        if ([answer isEqualToString:[_question1 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 2) {
+        if ([answer isEqualToString:[_question2 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 3) {
+        if ([answer isEqualToString:[_question3 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 4) {
+        if ([answer isEqualToString:[_question4 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 5) {
+        if ([answer isEqualToString:[_question5 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 6) {
+        if ([answer isEqualToString:[_question6 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 7) {
+        if ([answer isEqualToString:[_question7 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 8) {
+        if ([answer isEqualToString:[_question8 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 9) {
+        if ([answer isEqualToString:[_question9 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else if (idOfQuestion == 10) {
+        if ([answer isEqualToString:[_question10 objectForKey:@"correctAnswer"]]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    }
+    return NO;
+}
+
 @end

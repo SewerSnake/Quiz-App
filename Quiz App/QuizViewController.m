@@ -12,10 +12,11 @@
 @interface QuizViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *question;
-@property (weak, nonatomic) IBOutlet UILabel *answer1;
-@property (weak, nonatomic) IBOutlet UILabel *answer2;
-@property (weak, nonatomic) IBOutlet UILabel *answer3;
-@property (weak, nonatomic) IBOutlet UILabel *answer4;
+
+@property (weak, nonatomic) IBOutlet UIButton *answer1;
+@property (weak, nonatomic) IBOutlet UIButton *answer2;
+@property (weak, nonatomic) IBOutlet UIButton *answer3;
+@property (weak, nonatomic) IBOutlet UIButton *answer4;
 
 @property (nonatomic) GameLogic *game;
 
@@ -33,11 +34,19 @@
 // Shows the question and the four answers to the user.
 - (void)showQuestion {
     NSDictionary *question = [_game fetchQuestion];
+    
     _question.text = [question objectForKey:@"question"];
-    _answer1.text = [question objectForKey:@"answer1"];
-    _answer2.text = [question objectForKey:@"answer2"];
-    _answer3.text = [question objectForKey:@"answer3"];
-    _answer4.text = [question objectForKey:@"answer4"];
+    
+    [_answer1 setTitle:[question objectForKey:@"answer1"] forState:UIControlStateNormal];
+    
+    [_answer2 setTitle:[question objectForKey:@"answer2"]
+        forState:UIControlStateNormal];
+    
+    [_answer3 setTitle: [question objectForKey:@"answer3"]
+        forState:UIControlStateNormal];
+    
+    [_answer4 setTitle: [question objectForKey:@"answer4"]
+        forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
