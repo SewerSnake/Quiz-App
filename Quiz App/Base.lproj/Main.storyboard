@@ -28,18 +28,42 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52x-fG-Bky">
                                 <rect key="frame" x="95" y="234" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="answerOne:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="hWC-KK-jKU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpM-g9-9ND">
                                 <rect key="frame" x="95" y="339" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="answerTwo:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="ySS-F4-9m8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIV-9W-BDx">
                                 <rect key="frame" x="95" y="421" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="answerThree:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="tPs-34-8IS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCF-b5-b2x">
                                 <rect key="frame" x="90" y="513" width="187" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="answerFour:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="68a-D4-g72"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtt-yW-a7V">
+                                <rect key="frame" x="146" y="621" width="81" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W97-MN-8xR">
+                                <rect key="frame" x="137" y="571" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next question"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,7 +74,9 @@
                         <outlet property="answer2" destination="KpM-g9-9ND" id="HcJ-8C-xKG"/>
                         <outlet property="answer3" destination="AIV-9W-BDx" id="ggm-wp-7vR"/>
                         <outlet property="answer4" destination="bCF-b5-b2x" id="O55-hY-wDt"/>
+                        <outlet property="nextQuestion" destination="W97-MN-8xR" id="Ux2-yS-izO"/>
                         <outlet property="question" destination="kJg-PP-7d6" id="01y-3E-Zoq"/>
+                        <outlet property="rightOrWrong" destination="Xtt-yW-a7V" id="Yy7-nu-Uca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtX-wg-soI" userLabel="First Responder" sceneMemberID="firstResponder"/>

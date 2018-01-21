@@ -48,19 +48,19 @@
     
     _question3 = @{@"id":@"3",@"question":@"How high is Mount Everest?",@"answer1":@"3 267 m",@"answer2":@"10 023 m",@"answer3":@"9 496 m",@"answer4":@" 8 848 m", @"correctAnswer":@"4"};
     
-    _question4 = @{@"id":@"4",@"question":@"Who is the president of the United States?",@"answer1":@"Hillary Clinton",@"answer2":@"Barack Obama",@"answer3":@"Donald Trump",@"answer4":@"George Bush",@"correctAnswer":@"3"};
+    _question4 = @{@"id":@"4",@"question":@"Who is the president of the US?",@"answer1":@"Hillary Clinton",@"answer2":@"Barack Obama",@"answer3":@"Donald Trump",@"answer4":@"George Bush",@"correctAnswer":@"3"};
     
     _question5 = @{@"id":@"5",@"question":@"What is the square root of 81?",@"answer1":@"8",@"answer2":@"9",@"answer3":@"7",@"answer4":@"10",@"correctAnswer":@"2"};
     
-    _question6 = @{@"id":@"6",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros", @"correctAnswer":@"1"};
+    _question6 = @{@"id":@"6",@"question":@"What animal lives the longest?",@"answer1":@"Greenland shark",@"answer2":@"Koi",@"answer3":@"Red sea urchin",@"answer4":@"Bowhead whale", @"correctAnswer":@"1"};
     
-    _question7 = @{@"id":@"7",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"1"};
+    _question7 = @{@"id":@"7",@"question":@"Question 7",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"Bowhead whale",@"correctAnswer":@"3"};
     
-    _question8 = @{@"id":@"8",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"1"};
+    _question8 = @{@"id":@"8",@"question":@"Question 8",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
     
-    _question9 = @{@"id":@"9",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"1"};
+    _question9 = @{@"id":@"9",@"question":@"Question 9",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
     
-    _question10 = @{@"id":@"10",@"question":@"What is the largest land mammal?",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"1"};
+    _question10 = @{@"id":@"10",@"question":@"Question 10",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
 }
 
 // Determines if the user answered correctly.

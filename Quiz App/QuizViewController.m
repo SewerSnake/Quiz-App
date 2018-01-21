@@ -18,7 +18,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer3;
 @property (weak, nonatomic) IBOutlet UIButton *answer4;
 
+@property (weak, nonatomic) IBOutlet UILabel *rightOrWrong;
+
+@property (weak, nonatomic) IBOutlet UIButton *nextQuestion;
+
 @property (nonatomic) GameLogic *game;
+
+@property (nonatomic) int questionId;
 
 @end
 
@@ -26,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _nextQuestion.hidden = YES;
     _game = [[GameLogic alloc]init];
     [_game createQuestions];
     [self showQuestion];
@@ -34,6 +41,8 @@
 // Shows the question and the four answers to the user.
 - (void)showQuestion {
     NSDictionary *question = [_game fetchQuestion];
+    
+    _questionId = [[question objectForKey:@"id"] intValue];
     
     _question.text = [question objectForKey:@"question"];
     
@@ -51,6 +60,48 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)answerOne:(id)sender {
+    if([_game checkAnswer:_questionId usersAnswer:@"1"]) {
+        [self correctAnswer];
+    } else {
+        [self wrongAnswer];
+    }
+}
+
+- (IBAction)answerTwo:(id)sender {
+    if([_game checkAnswer:_questionId usersAnswer:@"2"]) {
+        [self correctAnswer];
+    } else {
+        [self wrongAnswer];
+    }
+}
+
+- (IBAction)answerThree:(id)sender {
+    if([_game checkAnswer:_questionId usersAnswer:@"3"]) {
+        [self correctAnswer];
+    } else {
+        [self wrongAnswer];
+    }
+}
+
+- (IBAction)answerFour:(id)sender {
+    if([_game checkAnswer:_questionId usersAnswer:@"4"]) {
+        [self correctAnswer];
+    } else {
+        [self wrongAnswer];
+    }
+}
+
+- (void)correctAnswer {
+    _rightOrWrong.text = @"Correct!";
+    _nextQuestion.hidden = NO;
+}
+
+- (void) wrongAnswer {
+    _rightOrWrong.text = @"Wrong...";
+    _nextQuestion.hidden = NO;
 }
 
 /*
