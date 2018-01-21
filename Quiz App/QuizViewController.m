@@ -62,6 +62,9 @@
     [super didReceiveMemoryWarning];
 }
 
+// The following four methods provide the "model"
+// with the info necessary to determine if
+// the user answered correctly or not.
 - (IBAction)answerOne:(id)sender {
     if([_game checkAnswer:_questionId usersAnswer:@"1"]) {
         [self correctAnswer];
@@ -94,14 +97,33 @@
     }
 }
 
+//
 - (void)correctAnswer {
     _rightOrWrong.text = @"Correct!";
     _nextQuestion.hidden = NO;
 }
 
+//
 - (void) wrongAnswer {
     _rightOrWrong.text = @"Wrong...";
     _nextQuestion.hidden = NO;
+}
+
+// A way to ensure that an answer
+// button cannot be pressed again after
+// providing an answer.
+- (void) toggleButtons: (BOOL)on {
+    if (on) {
+        _answer1.enabled = YES;
+        _answer2.enabled = YES;
+        _answer3.enabled = YES;
+        _answer4.enabled = YES;
+    } else {
+        _answer1.enabled = NO;
+        _answer2.enabled = NO;
+        _answer3.enabled = NO;
+        _answer4.enabled = NO;
+    }
 }
 
 /*
