@@ -32,9 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _nextQuestion.hidden = YES;
+    
+    [self toggleButtons:YES];
+    
     _game = [[GameLogic alloc]init];
+    
     [_game createQuestions];
+    
     [self showQuestion];
 }
 
@@ -56,10 +60,6 @@
     
     [_answer4 setTitle: [question objectForKey:@"answer4"]
         forState:UIControlStateNormal];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 // The following four methods provide the "model"
@@ -97,16 +97,16 @@
     }
 }
 
-//
+// Informs the user that he/she answered correctly.
 - (void)correctAnswer {
     _rightOrWrong.text = @"Correct!";
-    _nextQuestion.hidden = NO;
+    [self toggleButtons:NO];
 }
 
-//
+// Informs the user that he/she answered incorrectly.
 - (void) wrongAnswer {
     _rightOrWrong.text = @"Wrong...";
-    _nextQuestion.hidden = NO;
+    [self toggleButtons:NO];
 }
 
 // A way to ensure that an answer
@@ -118,12 +118,25 @@
         _answer2.enabled = YES;
         _answer3.enabled = YES;
         _answer4.enabled = YES;
+        _nextQuestion.hidden = YES;
     } else {
         _answer1.enabled = NO;
         _answer2.enabled = NO;
         _answer3.enabled = NO;
         _answer4.enabled = NO;
+        _nextQuestion.hidden = NO;
     }
+}
+
+// Resets the buttons and shows a new question.
+- (IBAction)nextQuestion:(id)sender {
+    _rightOrWrong.text = @"";
+    [self toggleButtons:YES];
+    [self showQuestion];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 /*
