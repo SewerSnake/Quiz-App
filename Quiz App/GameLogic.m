@@ -54,13 +54,13 @@
     
     _question6 = @{@"id":@"6",@"question":@"What animal lives the longest?",@"answer1":@"Greenland shark",@"answer2":@"Koi",@"answer3":@"Red sea urchin",@"answer4":@"Bowhead whale", @"correctAnswer":@"1"};
     
-    _question7 = @{@"id":@"7",@"question":@"Question 7",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"Bowhead whale",@"correctAnswer":@"3"};
+    _question7 = @{@"id":@"7",@"question":@"What is the Earth's circumference?",@"answer1":@"4550 miles",@"answer2":@"4201 miles",@"answer3":@"3500 miles",@"answer4":@"4008 miles",@"correctAnswer":@"4"};
     
-    _question8 = @{@"id":@"8",@"question":@"Question 8",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
+    _question8 = @{@"id":@"8",@"question":@"Who was Albert Einstein?",@"answer1":@"An actor",@"answer2":@"A physicist",@"answer3":@"A politician",@"answer4":@"A painter",@"correctAnswer":@"2"};
     
-    _question9 = @{@"id":@"9",@"question":@"Question 9",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
+    _question9 = @{@"id":@"9",@"question":@"How many sides does a die have?",@"answer1":@"Seven",@"answer2":@"Ten",@"answer3":@"Six",@"answer4":@"Three",@"correctAnswer":@"3"};
     
-    _question10 = @{@"id":@"10",@"question":@"Question 10",@"answer1":@"Giraffe",@"answer2":@"Hippopotamus",@"answer3":@"Elephant",@"answer4":@"rhinoceros",@"correctAnswer":@"3"};
+    _question10 = @{@"id":@"10",@"question":@"What is China's population?",@"answer1":@"1.4 billion",@"answer2":@"1 billion",@"answer3":@"700 million",@"answer4":@"Two billion",@"correctAnswer":@"1"};
 }
 
 // Determines if the user answered correctly.
