@@ -19,10 +19,24 @@
 @property (nonatomic) NSDictionary *question9;
 @property (nonatomic) NSDictionary *question10;
 
+@property (nonatomic) int questionCounter;
+
+-(void)resetCounter;
+
+-(int)getCounterValue;
+
+-(void)increaseCounter;
+
 -(NSDictionary*)fetchQuestion;
 
 -(void)createQuestions;
 
 -(BOOL)checkAnswer:(int)idOfQuestion usersAnswer: (NSString*)answer;
+
+-(void)questionTrackerReset;
+
+-(BOOL)questionAnswered:(int)idOfQuestion;
+
+-(void)setQuestionAsAnswered:(int)idOfQuestion;
 
 @end

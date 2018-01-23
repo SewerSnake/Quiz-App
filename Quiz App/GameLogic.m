@@ -11,6 +11,31 @@
 
 @implementation GameLogic
 
+// Sets the counter to zero. This
+// counter keeps track of the number
+// of answered questions.
+-(void)resetCounter {
+    _questionCounter = 0;
+}
+
+// A getter method for the counter.
+-(int)getCounterValue {
+    return _questionCounter;
+}
+
+// Increases the counter by one.
+// If ten is reached, a new game is
+// started by setting the counter to
+// zero, as well as set all questions
+// as unanswered.
+-(void)increaseCounter {
+    _questionCounter++;
+    if (_questionCounter == 10) {
+        [self questionTrackerReset];
+        [self resetCounter];
+    }
+}
+
 // Fetches a random question among the ten questions.
 -(NSDictionary*)fetchQuestion {
     int number = 1 + arc4random_uniform(10);
@@ -150,9 +175,9 @@
 }
 
 // Investigates if the question has been
-// guessed or not.
+// answered or not.
 // Returns YES if it has
-// Returns NO if not
+// Returns NO if it hasn't
 -(BOOL)questionAnswered:(int)idOfQuestion {
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     

@@ -33,6 +33,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    if ([preferences objectForKey:@"question1"] == nil) {
+        [_game questionTrackerReset];
+    }
+    
     [self toggleButtons:YES];
     
     _game = [[GameLogic alloc]init];
@@ -44,9 +50,13 @@
 
 // Shows the question and the four answers to the user.
 - (void)showQuestion {
-    NSDictionary *question = [_game fetchQuestion];
-    
-    _questionId = [[question objectForKey:@"id"] intValue];
+    NSDictionary *question;
+    do {
+        question = [_game fetchQuestion];
+        
+        _questionId = [[question objectForKey:@"id"] intValue];
+        
+    } while([_game questionAnswered:_questionId]);
     
     _question.text = [question objectForKey:@"question"];
     
@@ -101,12 +111,14 @@
 - (void)correctAnswer {
     _rightOrWrong.text = @"Correct!";
     [self toggleButtons:NO];
+    [_game setQuestionAsAnswered:_questionId];
 }
 
 // Informs the user that he/she answered incorrectly.
 - (void) wrongAnswer {
     _rightOrWrong.text = @"Wrong...";
     [self toggleButtons:NO];
+    [_game setQuestionAsAnswered:_questionId];
 }
 
 // A way to ensure that an answer
