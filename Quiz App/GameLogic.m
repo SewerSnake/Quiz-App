@@ -132,4 +132,54 @@
     return NO;
 }
 
+// Creates/sets all ten values in NSUserDefaults to NO.
+// This is used the first time the app is installed,
+// as well as when the user has guessed all questions
+// correctly.
+-(void)questionTrackerReset {
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    for (int i = 1; i <= 10; i++) {
+        NSString *currentQuestionKey =
+            [@"question" stringByAppendingString:@(i).stringValue];
+        
+        [preferences setBool:NO forKey:currentQuestionKey];
+    }
+    
+    [preferences synchronize];
+}
+
+// Investigates if the question has been
+// guessed or not.
+// Returns YES if it has
+// Returns NO if not
+-(BOOL)questionAnswered:(int)idOfQuestion {
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    NSString *currentQuestionKey =
+        [@"question" stringByAppendingString:@(idOfQuestion).stringValue];
+    
+    if (!([preferences objectForKey:currentQuestionKey] == nil)) {
+        BOOL answered = [preferences boolForKey:currentQuestionKey];
+        if (answered) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else {
+        return NO;
+    }
+}
+
+// Sets the question as answered, in
+// other words to YES.
+-(void)setQuestionAsAnswered:(int)idOfQuestion {
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    
+    NSString *currentQuestionKey =
+        [@"question" stringByAppendingString:@(idOfQuestion).stringValue];
+    
+    [preferences setBool:YES forKey:currentQuestionKey];
+}
+
 @end
