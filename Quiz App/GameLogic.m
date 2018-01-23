@@ -15,12 +15,12 @@
 // counter keeps track of the number
 // of answered questions.
 -(void)resetCounter {
-    _questionCounter = 0;
+    self.questionCounter = 0;
 }
 
 // A getter method for the counter.
 -(int)getCounterValue {
-    return _questionCounter;
+    return self.questionCounter;
 }
 
 // Increases the counter by one.
@@ -29,8 +29,8 @@
 // zero, as well as set all questions
 // as unanswered.
 -(void)increaseCounter {
-    _questionCounter++;
-    if (_questionCounter == 10) {
+    self.questionCounter++;
+    if (self.questionCounter == 10) {
         [self questionTrackerReset];
         [self resetCounter];
     }

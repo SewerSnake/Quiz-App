@@ -35,8 +35,9 @@
     
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     
-    if ([preferences objectForKey:@"question1"] == nil) {
+    if (([preferences objectForKey:@"question1"] == nil) && ([preferences objectForKey:@"question2"] == nil) && ([preferences objectForKey:@"question3"] == nil) && ([preferences objectForKey:@"question4"] == nil) && ([preferences objectForKey:@"question5"] == nil) && ([preferences objectForKey:@"question6"] == nil) && ([preferences objectForKey:@"question7"] == nil) && ([preferences objectForKey:@"question8"] == nil) && ([preferences objectForKey:@"question9"] == nil) && ([preferences objectForKey:@"question10"] == nil)) {
         [_game questionTrackerReset];
+        [_game resetCounter];
     }
     
     [self toggleButtons:YES];
@@ -112,6 +113,7 @@
     _rightOrWrong.text = @"Correct!";
     [self toggleButtons:NO];
     [_game setQuestionAsAnswered:_questionId];
+    [_game increaseCounter];
 }
 
 // Informs the user that he/she answered incorrectly.
@@ -119,6 +121,7 @@
     _rightOrWrong.text = @"Wrong...";
     [self toggleButtons:NO];
     [_game setQuestionAsAnswered:_questionId];
+    [_game increaseCounter];
 }
 
 // A way to ensure that an answer
