@@ -59,20 +59,17 @@
         
         _questionId = [[question objectForKey:@"id"] intValue];
         
-    } while([_game questionAnswered:_questionId]);
+    } while ([_game questionAnswered:_questionId]);
     
     _question.text = [question objectForKey:@"question"];
     
     [_answer1 setTitle:[question objectForKey:@"answer1"] forState:UIControlStateNormal];
     
-    [_answer2 setTitle:[question objectForKey:@"answer2"]
-        forState:UIControlStateNormal];
+    [_answer2 setTitle:[question objectForKey:@"answer2"] forState:UIControlStateNormal];
     
-    [_answer3 setTitle: [question objectForKey:@"answer3"]
-        forState:UIControlStateNormal];
+    [_answer3 setTitle:[question objectForKey:@"answer3"] forState:UIControlStateNormal];
     
-    [_answer4 setTitle: [question objectForKey:@"answer4"]
-        forState:UIControlStateNormal];
+    [_answer4 setTitle: [question objectForKey:@"answer4"] forState:UIControlStateNormal];
 }
 
 // The following four methods provide the "model"
@@ -113,19 +110,28 @@
 // Informs the user that he/she answered correctly.
 - (void)correctAnswer {
     _rightOrWrong.text = @"Correct!";
-    [self toggleButtons:NO];
-    [_game setQuestionAsAnswered:_questionId];
-    [_game increaseCounter];
+    [self handleQuestion];
+    [_game increaseCorrect];
     self.summary.text = [_game summary];
 }
 
 // Informs the user that he/she answered incorrectly.
 - (void) wrongAnswer {
     _rightOrWrong.text = @"Wrong...";
+    [self handleQuestion];
+    [_game increaseIncorrect];
+    self.summary.text = [_game summary];
+}
+
+// Ensures the user cannot press an answer
+// after he/she guessed. Provides the game logic
+// with the id of the answered question. Increases
+// the counter, which contains the number of
+// answered questions.
+- (void) handleQuestion {
     [self toggleButtons:NO];
     [_game setQuestionAsAnswered:_questionId];
     [_game increaseCounter];
-    self.summary.text = [_game summary];
 }
 
 // A way to ensure that an answer
@@ -148,8 +154,11 @@
 }
 
 // Resets the buttons and shows a new question.
+// Removes the text that was used, as it is
+// unnecessary for the new question.
 - (IBAction)nextQuestion:(id)sender {
-    _rightOrWrong.text = @"";
+    self.rightOrWrong.text = @"";
+    self.summary.text = @"";
     [self toggleButtons:YES];
     [self showQuestion];
 }
