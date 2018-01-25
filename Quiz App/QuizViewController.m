@@ -22,6 +22,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *nextQuestion;
 
+@property (weak, nonatomic) IBOutlet UILabel *summary;
+
 @property (nonatomic) GameLogic *game;
 
 @property (nonatomic) int questionId;
@@ -114,6 +116,7 @@
     [self toggleButtons:NO];
     [_game setQuestionAsAnswered:_questionId];
     [_game increaseCounter];
+    self.summary.text = [_game summary];
 }
 
 // Informs the user that he/she answered incorrectly.
@@ -122,6 +125,7 @@
     [self toggleButtons:NO];
     [_game setQuestionAsAnswered:_questionId];
     [_game increaseCounter];
+    self.summary.text = [_game summary];
 }
 
 // A way to ensure that an answer

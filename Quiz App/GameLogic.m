@@ -16,11 +16,24 @@
 // of answered questions.
 -(void)resetCounter {
     self.questionCounter = 0;
+    self.correctCounter = 0;
+    self.incorrectCounter = 0;
 }
 
 // A getter method for the counter.
 -(int)getCounterValue {
     return self.questionCounter;
+}
+
+// A getter method for the number of correctly
+// answered questions.
+-(int)getCorrect {
+    return self.correctCounter;
+}
+
+// A getter method for the counter.
+-(int)getIncorrect {
+    return self.incorrectCounter;
 }
 
 // Increases the counter by one.
@@ -34,6 +47,18 @@
         [self questionTrackerReset];
         [self resetCounter];
     }
+}
+
+// The user has guessed correctly!
+// Increase by one.
+-(void)increaseCorrect {
+    self.correctCounter++;
+}
+
+// The user has guessed incorrectly!
+// Increase by one.
+-(void)increaseIncorrect {
+    self.incorrectCounter++;
 }
 
 // Fetches a random question among the ten questions.
@@ -205,6 +230,24 @@
         [@"question" stringByAppendingString:@(idOfQuestion).stringValue];
     
     [preferences setBool:YES forKey:currentQuestionKey];
+}
+
+// Provides the user with a summary of correctly/incorrectly guessed questions after every fifth question.
+-(NSString*)summary {
+    NSString *numberString;
+    if (_questionCounter == 5 || _questionCounter == 10) {
+        numberString = [@([self getCorrect]) stringValue];
+        
+        NSString *correct = [@"Correct guesses: " stringByAppendingString:numberString];
+        
+        numberString = [@([self getIncorrect]) stringValue];
+        
+        NSString *incorrect = [@" Incorrect guesses: " stringByAppendingString:numberString];
+        
+        return [correct stringByAppendingString:incorrect];
+    } else {
+        return @"";
+    }
 }
 
 @end

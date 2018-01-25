@@ -21,11 +21,23 @@
 
 @property (nonatomic) int questionCounter;
 
+@property (nonatomic) int correctCounter;
+
+@property (nonatomic) int incorrectCounter;
+
 -(void)resetCounter;
 
 -(int)getCounterValue;
 
+-(int)getCorrect;
+
+-(int)getIncorrect;
+
 -(void)increaseCounter;
+
+-(void)increaseCorrect;
+
+-(void)increaseIncorrect;
 
 -(NSDictionary*)fetchQuestion;
 
@@ -38,5 +50,7 @@
 -(BOOL)questionAnswered:(int)idOfQuestion;
 
 -(void)setQuestionAsAnswered:(int)idOfQuestion;
+
+-(NSString*)summary;
 
 @end

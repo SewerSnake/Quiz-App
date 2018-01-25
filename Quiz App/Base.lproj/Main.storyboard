@@ -68,11 +68,19 @@
                                     <action selector="answerFour:" destination="ZsQ-fm-EvZ" eventType="touchUpInside" id="68a-D4-g72"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGO-xe-4B3">
+                                <rect key="frame" x="166" y="532" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7Km-Hk-bhv"/>
                     </view>
                     <connections>
+                        <outlet property="Summary" destination="jGO-xe-4B3" id="0uT-Kf-huD"/>
                         <outlet property="answer1" destination="52x-fG-Bky" id="OmY-v1-PES"/>
                         <outlet property="answer2" destination="KpM-g9-9ND" id="HcJ-8C-xKG"/>
                         <outlet property="answer3" destination="AIV-9W-BDx" id="ggm-wp-7vR"/>
